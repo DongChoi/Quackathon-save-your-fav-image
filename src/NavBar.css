@@ -1,0 +1,25 @@
+.nav {
+    background-color: rgb(221, 103, 103);
+    text-align: left;
+    font-weight: bold;
+}
+
+  
+nav a {
+    padding: 0.5em 1em;
+    width: auto;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+  
+
+nav a.active {
+    color: rgb(146, 0, 0);
+    text-decoration: none;
+}
+  
+nav a:hover {
+    color: rgb(38, 55, 212);
+    text-decoration: none;
+}
