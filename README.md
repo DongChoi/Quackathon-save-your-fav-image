@@ -1,3 +1,8 @@
+# Save Your Faves
+
+This project was created by [DongChoi](https://github.com/DongChoi), [NecoLanch](https://github.com/Necolanch), [dmcconeghy](https://github.com/dmcconeghy), and [DirtyHoops](https://github.com/dirtyhoops) for a weekend Quackathon for the [#DearJuniorDev Discord Community]([
+](https://discord.gg/ZNzK3YeG). 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
