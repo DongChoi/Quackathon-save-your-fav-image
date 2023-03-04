@@ -16,8 +16,10 @@ function App() {
 
   useEffect(function fetchImagesOnLoad() {
     async function fetchImages() {
-      //imagesFromApi = api call to get images
-      // setImages = imageFromApi
+      axios.get("https://api.unsplash.com/photos/random?count=30&client_id=h-JqYpjiPbIbpYbTW9E3yluBUrgU1tCjb2ysGQqM-O0")
+            .then(response=>{
+              setImages(response.data)
+            })
       setIsLoading(false);
     }
     fetchImages();
