@@ -14,18 +14,17 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--main-bg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--cerulean);
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +35,32 @@
     transform: rotate(360deg);
   }
 }
+
+
+:root {
+  /* Coolors.io generated palettes */
+  --rich-black: #0b2027ff;
+  --cerulean: #40798cff;
+  --verdigris: #70a9a1ff;
+  --ash-gray: #cfd7c7ff;
+  --cornsilk: #f6f1d1ff;
+  --dartmouth-green: #0b6e4fff;
+  --garnet: #754043ff;
+  --fulvous: #e28413ff;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+
+
+  --main-bg-color: black;
+
+  background-color: var(--main-bg-color);
+
+  --navbar-background-color: var(--oxford-blue);
+  --navbar-text-color: var(--platinum);
+  --navbar-text-active-color: var(--platinum);
+  --navbar-text-hover-color: var(--orange-web);
+
+  font-size: 1rem;
+  
+} 
