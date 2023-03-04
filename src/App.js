@@ -5,36 +5,18 @@ import "./App.css";
 import NavBar from "./NavBar";
 import { BrowserRouter } from "react-router-dom";
 import RouteList from "./RouteList";
+import Home from "./Home";
 
 function App() {
-  //const [images, setImages] = useState([]);
-  //const [userImages, setUserImages] = useState(
-  //  localStorage.getItem("userImages") || []
-  //);
-//
-  //const [isLoading, setIsLoading] = useState(true);
-//
-  //useEffect(function fetchImagesOnLoad() {
-  //  async function fetchImages() {
-  //    axios.get("https://api.unsplash.com/photos/random?count=30&client_id=h-JqYpjiPbIbpYbTW9E3yluBUrgU1tCjb2ysGQqM-O0")
-  //          .then(response=>{
-  //            setImages(response.data)
-  //          })
-  //    setIsLoading(false);
-  //  }
-  //  fetchImages();
-  //}, []);
-//
-  //function handlePinClick(src) {
-  //  localStorage.setItem("userImages", [src, ...userImages]);
-  //}
-
   return (
     <div className="App">
       <BrowserRouter>
           <div>
             <RouteList></RouteList>
           </div>
+        </NavBar>
+        <Home></Home>
+
       </BrowserRouter>
     </div>
   );
