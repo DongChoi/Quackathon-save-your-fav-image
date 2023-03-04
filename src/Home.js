@@ -4,6 +4,7 @@ import axios from "axios";
 const Home=()=>{
     const [images, setImages] = useState([]);
     //I don't think we need a state variable for this because in the pinned page, we are looping through what is in localStorage
+
     const [userImages, setUserImages] = useState([]);
 
     const [isLoading, setIsLoading] = useState(true);
@@ -45,12 +46,11 @@ const Home=()=>{
 
       }
       
-    } 
-
-    
+    }     
     //I don't think we need a state variable for this because in the pinned page, we are looping through what is in localStorage
     setUserImages([{[sourceId]: src.urls.regular}, ...userImages]);
     console.log("UserImage State :", userImages);
+
   }
     return(
         <div>

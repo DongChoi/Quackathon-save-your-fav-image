@@ -2,17 +2,15 @@ import React from "react";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 import SavedImages from "./SavedImages";
-
-function RouteList(/*{ savedImages }*/) {
+import Home from "./Home";
+const RouteList=()=> {
   return (
-    <>
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<Home />} />
         <Route path="/userImage" />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </>
   );
 }
 
