@@ -1,8 +1,13 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-function RouteList(/*{ savedImages }*/) {
-  return <></>;
+const SavedImages=()=>{
+  const userImages=localStorage.getItem("userImages");
+  return(
+    <div>
+      
+    </div>
+  )
 }
 
-export default RouteList;
+export default SavedImages;
