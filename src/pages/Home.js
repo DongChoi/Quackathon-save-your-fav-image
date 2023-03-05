@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from '../components/Image/Image';
 
-const Home = ({ images, handlePinClick }) => {
+const Home = ({ images, handlePinClick, handleUnpin }) => {
   return (
     <div className='container'>
       <div className='image-container'>
         {images.map(image => (
-          <Image key={image.id} image={image} handlePinClick={handlePinClick} />
+          <Image
+            key={image.id}
+            image={image}
+            handlePinClick={handlePinClick}
+            handleUnpin={handleUnpin}
+          />
         ))}
       </div>
       {/* {images.map(image => {
