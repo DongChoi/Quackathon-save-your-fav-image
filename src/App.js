@@ -20,6 +20,7 @@ function App() {
     fetchImages();
   }, []);
 
+  // WE WILL CHANGE THIS TO FETCHING FROM THE API LATER ON TODAY BEFORE DEPLOYING IT
   const fetchImages = () => {
     const newData = Object.entries(allImages).map(img => {
       img[1].isPinned = userImages[img[1].id] ? true : false;
@@ -27,6 +28,21 @@ function App() {
     });
 
     setImages(newData);
+
+    // await axios
+    //   .get(`https://api.unsplash.com/photos/random?count=${numberOfImages}&client_id=${token}`)
+    //   .then(response => {
+    //     const newData = Object.entries(response.data.splice(0, 10)).map(img => {
+    //       img[1].isPinned = userImages[img[1].id] ? true : false;
+    //       return img[1];
+    //     });
+
+    //     console.log(newData);
+
+    //     setImages(newData);
+    //     // setIsLoading(false);
+    //     // console.log(response.data.splice(0, 10));
+    //   });
   };
 
   // Handling Pin
