@@ -1,13 +1,17 @@
 import "../../style/ImageStyle.css";
 
 const Image = ({ image, handlePin, handleUnpin }) => {
+  // function handleClickOnImage() {
+  //   console.log("is it clicking?");
+  //   return <DetailedImage image={image} />;
+  // }
+
   return (
     <div className="image-box">
       <img className="homeImages" src={image.urls.small} alt="random" />
-
       {!image.isPinned ? (
-        <button className="pin" onClick={() => handlePin(image.id, image.urls.small)}>
-          <i class="bookmark fa-regular fa-bookmark"></i>
+        <button onClick={() => handlePin(image.id, image)}>
+          <i class="fa-regular fa-bookmark"></i>
         </button>
       ) : (
         <button className="pin" onClick={() => handleUnpin(image.id)}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import UserImage from "../components/Image/UserImage.js";
+import Image from "../components/Image/Image.js";
 
-function SavedImagesPage({ images, handlePinClick, handleUnpin }) {
+function SavedImagesPage({ images, handlePin, handleUnpin }) {
   function loopThroughObject(imagess) {
     //get keys, and loop through keys and get image.id
     /*{
@@ -10,7 +10,7 @@ function SavedImagesPage({ images, handlePinClick, handleUnpin }) {
     const keys = Object.keys(imagess);
     console.log("KEYS ARE RIGHT HERE", keys);
     const arrayImages = keys.map((key) => {
-      return { [key]: imagess[key], isPinned: true };
+      return imagess[key];
     });
 
     return arrayImages;
@@ -21,11 +21,10 @@ function SavedImagesPage({ images, handlePinClick, handleUnpin }) {
     <div className="container">
       <div className="image-container">
         {arrayImages.map((image) => (
-          <UserImage
-            key={[image]}
-            imageKey={Object.keys(image)}
+          <Image
+            key={image.id}
             image={image}
-            handlePinClick={handlePinClick}
+            handlePin={handlePin}
             handleUnpin={handleUnpin}
           />
         ))}
