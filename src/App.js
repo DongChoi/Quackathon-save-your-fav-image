@@ -1,28 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import NavBar from './NavBar';
-import { BrowserRouter } from 'react-router-dom';
-import RouteList from './RouteList';
-import Home from './pages/Home';
-
-import { allImages } from './images';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import NavBar from "./NavBar";
+import { BrowserRouter } from "react-router-dom";
+import RouteList from "./RouteList";
+import Home from "./pages/Home";
+import { allImages } from "./images";
+import SavedImages from "./SavedImages";
+import SavedImagesPage from "./pages/SavedImagesPage";
 
 function App() {
   const [images, setImages] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   const [userImages, setUserImages] = useState(
-    localStorage.getItem('userImages') === null
+    localStorage.getItem("userImages") === null
       ? {}
-      : JSON.parse(localStorage.getItem('userImages'))
+      : JSON.parse(localStorage.getItem("userImages"))
   );
 
   useEffect(() => {
     fetchImages();
+    setIsLoading(false);
   }, []);
 
   // WE WILL CHANGE THIS TO FETCHING FROM THE API LATER ON TODAY BEFORE DEPLOYING IT
   const fetchImages = () => {
-    const newData = Object.entries(allImages).map(img => {
+    const newData = Object.entries(allImages).map((img) => {
       img[1].isPinned = userImages[img[1].id] ? true : false;
       return img[1];
     });
@@ -52,29 +54,29 @@ function App() {
 
     let userImagesLS = getUserImages();
     userImagesLS = { ...userImagesLS, [imageId]: imageUrl };
-    localStorage.setItem('userImages', JSON.stringify(userImagesLS));
+    localStorage.setItem("userImages", JSON.stringify(userImagesLS));
 
     // Updating isPinned to true for the selected image inside images state
     const newImages = [...images];
-    const selectedImage = newImages.find(a => a.id === imageId);
+    const selectedImage = newImages.find((a) => a.id === imageId);
 
     selectedImage.isPinned = true;
     setImages(newImages);
   };
 
   // Handling the Unpin
-  const handleUnpin = imageId => {
+  const handleUnpin = (imageId) => {
     const newUserImages = userImages;
     delete newUserImages[imageId];
     setUserImages(newUserImages);
 
     // let userImagesLS = getUserImages();
 
-    localStorage.setItem('userImages', JSON.stringify(userImages));
+    localStorage.setItem("userImages", JSON.stringify(userImages));
 
     // Updating isPinned to false for the selected image inside images state
     const newImages = [...images];
-    const selectedImage = newImages.find(a => a.id === imageId);
+    const selectedImage = newImages.find((a) => a.id === imageId);
 
     selectedImage.isPinned = false;
     setImages(newImages);
@@ -84,10 +86,10 @@ function App() {
   const getUserImages = () => {
     let images;
 
-    if (localStorage.getItem('userImages') === null) {
+    if (localStorage.getItem("userImages") === null) {
       images = {};
     } else {
-      images = JSON.parse(localStorage.getItem('userImages'));
+      images = JSON.parse(localStorage.getItem("userImages"));
     }
 
     return images;
@@ -161,21 +163,31 @@ function App() {
   //     }
   //   }
   // }
+  if (isLoading) {
+    return (
+      <div className="loading" style={{ width: "3em", height: "3em" }}>
+        Loading
+      </div>
+    );
+  }
 
   return (
-    <div className='App'>
+    <div className="App">
       <BrowserRouter>
-        <NavBar>
-          <div>
-            <RouteList />
-          </div>
-        </NavBar>
-
-        <Home
+        <NavBar userImages={userImages} />
+        <div>
+          <RouteList
+            images={images}
+            handlePin={handlePin}
+            handleUnpin={handleUnpin}
+            userImages={userImages}
+          />
+        </div>
+        {/* <Home
           images={images}
           handlePinClick={handlePin}
           handleUnpin={handleUnpin}
-        />
+        /> */}
       </BrowserRouter>
     </div>
   );
