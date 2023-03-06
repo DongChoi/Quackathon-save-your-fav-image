@@ -36,7 +36,6 @@
   }
 }
 
-
 :root {
   /* Coolors.io generated palettes */
   --rich-black: #0b2027ff;
@@ -51,7 +50,6 @@
   --orange-web: #fca311ff;
   --platinum: #e5e5e5ff;
 
-
   --main-bg-color: black;
 
   background-color: var(--main-bg-color);
@@ -62,5 +60,34 @@
   --navbar-text-hover-color: var(--orange-web);
 
   font-size: 1rem;
-  
-} 
+  color: white;
+}
+
+/* Images styling */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-box {
+  flex: 0 0 23%;
+  position: relative;
+}
+
+.image-box button {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 50px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  transition: all 0.1s;
+}
+
+.image-box button:hover {
+  font-size: 55px;
+  color: rgb(207, 161, 161);
+}
