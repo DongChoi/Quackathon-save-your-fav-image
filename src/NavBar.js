@@ -5,7 +5,7 @@ function NavBar({ userImages }) {
   let numberOfImages = Object.keys(userImages).length;
   return (
     <nav className="nav">
-      <div>
+      <div className="container">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/userImage">Saved Images ({numberOfImages})</NavLink>
       </div>
