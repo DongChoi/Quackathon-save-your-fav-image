@@ -1,0 +1,22 @@
+@media screen and (max-width:420px){
+    .userImages{
+        width:100vw;
+    }
+
+    .homeImages{
+        width:100vw;
+    }
+}
+
+.image-box{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+}
+
+.bookmark{
+    position:relative;
+    right: .2em;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(43%) saturate(3604%) hue-rotate(163deg) brightness(97%) contrast(101%);
+}
