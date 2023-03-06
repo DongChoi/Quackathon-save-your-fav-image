@@ -48,12 +48,12 @@ function App() {
   };
 
   // Handling Pin
-  const handlePin = (imageId, imageUrl) => {
-    setUserImages({ ...userImages, [imageId]: imageUrl });
-    console.log(userImages);
+  const handlePin = (imageId, image) => {
+    setUserImages({ ...userImages, [imageId]: image });
+    console.log("these are the user images", userImages);
 
     let userImagesLS = getUserImages();
-    userImagesLS = { ...userImagesLS, [imageId]: imageUrl };
+    userImagesLS = { ...userImagesLS, [imageId]: image };
     localStorage.setItem("userImages", JSON.stringify(userImagesLS));
 
     // Updating isPinned to true for the selected image inside images state
