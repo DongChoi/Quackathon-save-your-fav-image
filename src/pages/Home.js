@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "../components/Image/Image";
 
+
+//Props are passed down from App.js -> Route.js -< Home.js
 const Home = ({ images, handlePin, handleUnpin }) => {
   return (
     <div className="container">
