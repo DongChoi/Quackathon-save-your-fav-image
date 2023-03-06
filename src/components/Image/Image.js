@@ -1,5 +1,6 @@
 import "../../style/ImageStyle.css";
 
+//Props handed down from App.js -> RouteList.js -> Homepage.js or SavedImagesPage.js -> Image
 const Image = ({ image, handlePin, handleUnpin }) => {
   // function handleClickOnImage() {
   //   console.log("is it clicking?");
