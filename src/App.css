@@ -1,41 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: var(--main-bg-color);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: var(--cerulean);
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 :root {
   /* Coolors.io generated palettes */
   --rich-black: #0b2027ff;
@@ -65,26 +27,39 @@
 
 /* Images styling */
 .image-container {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
+  /* justify-content: center; */
 }
 
 .image-box {
-  flex: 0 0 23%;
+  flex: 0 0 25%;
   position: relative;
+  max-width: 25%;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
 }
 
 .image-box button {
   cursor: pointer;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 17px;
+  top: 17px;
   font-size: 50px;
   color: white;
   background-color: transparent;
   border: none;
   transition: all 0.1s;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(43%) saturate(3604%)
+    hue-rotate(163deg) brightness(97%) contrast(101%);
 }
 
 .image-box button:hover {
@@ -94,6 +69,36 @@
 
 h1 {
   font-size: 2rem;
-  text-align:center;
+  text-align: center;
   padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .image-box {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+
+  /* .image-box button {
+    font-size: 45px;
+  } */
+}
+
+@media only screen and (max-width: 720px) {
+  .image-box {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .image-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
