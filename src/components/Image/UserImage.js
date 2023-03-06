@@ -1,3 +1,5 @@
+import "../../style/ImageStyle.css";
+
 const UserImage = ({ key, imageKey, image, handlePinClick, handleUnpin }) => {
   console.log("IMAGE VALUE", image[imageKey[0]]); //[key, ispinned]
   //   {ipCY-i4Quvs: 'https://plus.unsplash.com/premium_photo-1672127206…fHx8fHx8
@@ -5,14 +7,14 @@ const UserImage = ({ key, imageKey, image, handlePinClick, handleUnpin }) => {
   console.log("key", imageKey);
   return (
     <div className="image-box">
-      <img src={image[imageKey[0]]} alt="random" />
+      <img className="userImages" src={image[imageKey[0]]} alt="random" />
       {!image.isPinned ? (
         <button onClick={() => handlePinClick(imageKey, image[key][0])}>
-          <i class="fa-regular fa-bookmark"></i>
+          <i class="bookmark fa-regular fa-bookmark"></i>
         </button>
       ) : (
         <button onClick={() => handleUnpin(imageKey[0])}>
-          <i class="fa-solid fa-bookmark"></i>
+          <i className="bookmark fa-solid fa-bookmark"></i>
         </button>
       )}
 
