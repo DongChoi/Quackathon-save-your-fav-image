@@ -11,7 +11,7 @@ const Image = ({ image, handlePin, handleUnpin }) => {
       <img className="homeImages" src={image.urls.small} alt="random" />
       {!image.isPinned ? (
         <button onClick={() => handlePin(image.id, image)}>
-          <i class="fa-regular fa-bookmark"></i>
+          <i className="fa-regular fa-bookmark"></i>
         </button>
       ) : (
         <button className="pin" onClick={() => handleUnpin(image.id)}>
@@ -19,7 +19,7 @@ const Image = ({ image, handlePin, handleUnpin }) => {
         </button>
       )}
       {/* <button onClick={() => handlePinClick(image)}>
-        <i class='fa-regular fa-bookmark'></i>
+        <i className='fa-regular fa-bookmark'></i>
       </button> */}
     </div>
   );

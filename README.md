@@ -4,6 +4,8 @@ This project was created by [DongChoi](https://github.com/DongChoi), [NecoLanch]
 
 The project brief for the weekend sprint was "Create a static photo gallery that allows your website's visitor to pin their favorite pictures onto a separate page using the concept of local storage".
 
+Our team used bootstrapped a React App with two pages, one for saving favorite images and a second for display saved favorites. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
