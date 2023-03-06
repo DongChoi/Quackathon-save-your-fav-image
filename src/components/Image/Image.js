@@ -12,11 +12,11 @@ const Image = ({ image, handlePin, handleUnpin }) => {
       <img className="homeImages" src={image.urls.small} alt="random" />
       {!image.isPinned ? (
         <button onClick={() => handlePin(image.id, image)}>
-          <i className="bookmark fa-regular fa-bookmark"></i>
+          <i className="fa-regular fa-bookmark"></i>
         </button>
       ) : (
         <button className="pin" onClick={() => handleUnpin(image.id)}>
-          <i className="bookmark fa-solid fa-bookmark"></i>
+          <i className="fa-solid fa-bookmark"></i>
         </button>
       )}
       {/* <button onClick={() => handlePinClick(image)}>
