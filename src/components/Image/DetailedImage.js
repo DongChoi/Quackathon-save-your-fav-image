@@ -1,3 +1,5 @@
+/* NOTE TO VIEWERS: We chose not to invest more effort into enhancing the 
+functionality, as we deemed the current implementation sufficient for our needs.. */
 import React from "react";
 import { useState } from "react";
 const DetailedImage = ({ image }) => {

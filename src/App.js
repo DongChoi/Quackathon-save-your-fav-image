@@ -71,7 +71,6 @@ function App() {
     setUserImages(newUserImages);
 
     // let userImagesLS = getUserImages();
-
     localStorage.setItem("userImages", JSON.stringify(userImages));
 
     // Updating isPinned to false for the selected image inside images state

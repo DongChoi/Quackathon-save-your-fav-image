@@ -2,16 +2,14 @@ import React from "react";
 import DetailedImage from "./DetailedImage";
 
 const Image = ({ image, handlePin, handleUnpin }) => {
-  console.log("IMAGE IN THE IMAGE COPONENT", image);
-
-  function handleClickOnImage() {
-    console.log("is it clicking?");
-    return <DetailedImage image={image} />;
-  }
+  // function handleClickOnImage() {
+  //   console.log("is it clicking?");
+  //   return <DetailedImage image={image} />;
+  // }
 
   return (
     <div className="image-box">
-      <img src={image.urls.small} alt="random" onClick={handleClickOnImage} />
+      <img src={image.urls.small} alt="random" />
 
       {!image.isPinned ? (
         <button onClick={() => handlePin(image.id, image)}>
