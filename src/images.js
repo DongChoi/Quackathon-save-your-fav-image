@@ -1,5 +1,8 @@
-//for dev purposes
 //images acquired using token that limited 50 requests per hr.
+//We could have done API calls but we were thinking about multiple users and our token only allowed us to do 50 calls
+//Future implementations: save this into a postgresql database, and call our backend api
+  //Then when user reaches the bottom, app makes an api call to unsplash to get 30 x 50 = 1500 images and update database
+    //at most, we will be getting 1500 new images to our database/hr
 
 const images1 = [
   {
