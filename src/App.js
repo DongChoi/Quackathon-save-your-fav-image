@@ -14,13 +14,12 @@ function App() {
       : JSON.parse(localStorage.getItem("userImages"))
   );
 
-  // React would like fetchImages as a dependency, but we're not calling it. 
+  // React would like fetchImages as a dependency, but we're not calling it.
   useEffect(() => {
     fetchImages();
     setIsLoading(false);
   }, []);
 
-  
   const fetchImages = () => {
     const newData = Object.entries(allImages).map((img) => {
       img[1].isPinned = userImages[img[1].id] ? true : false;
@@ -28,13 +27,12 @@ function App() {
     });
 
     setImages(newData);
-    
   };
 
   // Handling Pin
   const handlePin = (imageId, image) => {
     setUserImages({ ...userImages, [imageId]: image });
-
+    image["isPinned"] = true;
     let userImagesLS = getUserImages();
     userImagesLS = { ...userImagesLS, [imageId]: image };
     localStorage.setItem("userImages", JSON.stringify(userImagesLS));
