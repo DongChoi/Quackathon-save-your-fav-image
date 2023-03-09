@@ -20,13 +20,16 @@ Our team is pleased with the work we've done over a few hours spread across a we
 Thanks to the DJD community for a great event. 
 
 ## Visit the Site:
-Our site is deployed with Github Pages here: 
+[Our site is deployed with Netlifly](https://main--meek-genie-b218c4.netlify.app/)
 
 ## Local Deployment
-To explore our project from your own IDE:
+To explore our project from your own IDE: 
 
 ### Clone our repo.
 `https://github.com/DongChoi/Quackathon-save-your-fav-image.git`
+
+### Install requirements. 
+`npm install` 
 
 ### Start the server. 
 `npm start` 
