@@ -6,6 +6,9 @@
 - [dmcconeghy](https://github.com/dmcconeghy)
 - [DirtyHoops](https://github.com/dirtyhoops)
 
+![Demo Image](public/pic02.png)
+
+
 ## Summary:
 This project was created for a weekend Quackathon for the [#DearJuniorDev Discord Community](https://discord.gg/ZNzK3YeG).
 
